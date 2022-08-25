@@ -2,7 +2,12 @@
  Chat Rooms as an exercise for Python Software Development course
  Based on [PySimpleGUI](https://github.com/PySimpleGUI) framework
 
-[![freeCodeCamp Social Banner](https://drive.google.com/open?id=14i-101CPhIrEBfQOg8Kkut5SVNjfYNdm&authuser=vasja34%40gmail.com&usp=drive_fs)](https://drive.google.com/open?id=14i-101CPhIrEBfQOg8Kkut5SVNjfYNdm&authuser=vasja34%40gmail.com&usp=drive_fs)
+- Chat Client
+![Chat Client](screenshots/Client95.png?raw=true "Chat Client")
+
+
+- Chat Server
+![Chat Client](screenshots/Server.png?raw=true "Chat Server")
 
 ## Credits
 - GitHub: [PySimpleGUI](https://github.com/PySimpleGUI)

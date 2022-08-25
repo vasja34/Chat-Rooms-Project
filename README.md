@@ -9,12 +9,16 @@
    ​
 
 - Chat Server
+
    ![Chat Server](screenshots/Server.png)
 
+   ​
 
 
-- Chat Status
+
+- Clients Status
    ![Chat Status](screenshots/Status.png)
+
 
 
 

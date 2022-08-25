@@ -16,6 +16,7 @@
 
 
 - Clients Status
+
    ![Chat Status](screenshots/Status.png)
 
    ​

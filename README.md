@@ -3,6 +3,7 @@
  Based on [PySimpleGUI](https://github.com/PySimpleGUI) framework
 
 - Chat Client
+
    ![Chat Client](screenshots/Client.png?raw=true)
 
    ​

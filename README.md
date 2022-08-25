@@ -1,6 +1,5 @@
 # Chat Rooms Project
- Chat Rooms as an exercise for Python Software Development course
- Based on [PySimpleGUI](https://github.com/PySimpleGUI) framework
+ Chat Rooms as an exercise for Python Software Development workshop. (Based on [PySimpleGUI](https://github.com/PySimpleGUI) framework)
 
 - Chat Client
 

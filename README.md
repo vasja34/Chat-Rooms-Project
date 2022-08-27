@@ -9,11 +9,11 @@ Chat Rooms is a basic asynchronous TCP/IP app. The chat server creates a server 
 * The server receives a message from a client, broadcasts it to all clients, and then sends an event to the GUI.
 * The server accepts new clients and starts a new thread for each one. It also stores the client's information in a dictionary called status_dict.
 * The server has two loops, one for accepting new clients and another for broadcasting the messages. The first loop continuously accepts new clients until MAX_CLIENTS is reached.
-* Initially all clients are joined to the room called "Lobby".  A server broadcasts the message to everyone else in the room.
+* Initially all clients are joined to the room called "Lobby".
 
 ## Installation
 
-There is none :) just download the files from a release and run it.
+There is none. 😊 Just download the release and run it.
 
 ## Requirements
 
@@ -36,13 +36,9 @@ $ python chat_client_ui.py
 - Chat Client
 
   ![Chat Client](screenshots/Client.png?raw=true)
-
-
 - Chat Server
 
   ![Chat Server](screenshots/Server.png)
-
-
 - Clients Status
 
   ![Chat Status](screenshots/Status.png)

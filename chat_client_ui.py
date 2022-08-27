@@ -55,7 +55,7 @@ def receive(client, window, nickname):
                         msg_payload,
                     ),
                 )
-                # Data sent is a tuple
+                # Data sent as a tuple
         except ConnectionAbortedError:
             time_stamp = str(datetime.datetime.now())[:19]
             window.write_event_value(

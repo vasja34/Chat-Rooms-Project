@@ -4,9 +4,9 @@ Dependencies: PySimpleGUI:  https://pypi.org/project/PySimpleGUI/
                             pip install PySimpleGUI
 
 Example:
-        $ python "C:/Users/Vadim/Documents/Python/INT Course/ChatProject/chat_server_ui.py"
+        $ python "C:/Users/User/Documents/Python/Chat-Rooms-Project/chat_server_ui.py"
 
-@Author: Moldavsky Vadim
+@Author: Vadim Moldavsky   vasja34@gmail.com
 @Date:   17/08/2022
 """
 
@@ -22,12 +22,28 @@ from chat_protocol import *
 
 
 def broadcast(message, clients):
-    # message is already encoded
+    """
+    It takes a message and a list of clients, and sends the message to each client in the list
+
+    :param message: The message to be sent to all clients. The message is already encoded
+    :param clients: A list of all the clients connected to the server
+    """
     for client in clients:
         client.send(message)
 
 
 def handle(client, clients, nicknames, addresses, status_dict, window):
+    """
+    It receives a message from a client, broadcasts it to all clients, and then sends an event to the
+    GUI.
+
+    :param client: the client socket
+    :param clients: list of clients
+    :param nicknames: list of nicknames
+    :param addresses: list of tuples of (ip, port)
+    :param status_dict: a dictionary that stores the status of each client
+    :param window: the tkinter window
+    """
     while True:
         idx = clients.index(client)
         nick = nicknames[idx]
@@ -68,6 +84,16 @@ def handle(client, clients, nicknames, addresses, status_dict, window):
 
 
 def accept_new_client(server, clients, nicknames, addresses, status_dict, window):
+    """
+    It accepts new clients and starts a new thread for each one
+
+    :param server: the socket object
+    :param clients: a list of all the clients connected to the server
+    :param nicknames: a list of nicknames of all clients
+    :param addresses: a list of all the addresses of the clients
+    :param status_dict: a dictionary that contains the client's nickname and the room they're in
+    :param window: the window object
+    """
     while True:
         if len(clients) < MAX_CLIENTS:
             time_stamp = str(datetime.datetime.now())[:19]
@@ -110,6 +136,15 @@ def accept_new_client(server, clients, nicknames, addresses, status_dict, window
 
 
 def get_status(status_dict):
+    """
+    It creates a window with a tabbed layout.  The first tab is a tree element that shows the chat rooms
+    and the users in each room.  The second tab is a table element that shows the users and the room
+    they are in.
+
+    :param status_dict: a dictionary of dictionaries.  The outer dictionary is keyed by the address of
+    the client.  The inner dictionary is keyed by the name of the field.
+    :return: A window object.
+    """
     # treedata.Insert(parent, fullname, f, values=[], icon=folder_icon)
     tree_data = sg.TreeData()
     tree_data.Insert("", "Lobby", "🗫 Lobby", [""])
@@ -199,6 +234,10 @@ def get_status(status_dict):
 
 
 def main():
+    """
+    The main function of the chat server. It creates a server socket, binds it to a port and listens for
+    incoming connections.
+    """
     ############################################################
     # Server Socket  init
     ############################################################

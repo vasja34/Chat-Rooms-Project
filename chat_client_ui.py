@@ -4,11 +4,12 @@ Dependencies: PySimpleGUI:  https://pypi.org/project/PySimpleGUI/
                             pip install PySimpleGUI
 
 Example:
-        $ python "C:/Users/Vadim/Documents/Python/INT Course/ChatProject/chat_client_ui.py"
+        $ python "C:/Users/User/Documents/Python/Chat-Rooms-Project/chat_client_ui.py"
 
-@Author: Moldavsky Vadim
+@Author: Vadim Moldavsky   vasja34@gmail.com
 @Date:   17/08/2022
 """
+
 import datetime
 import random
 import socket
@@ -22,6 +23,13 @@ from chat_protocol import *
 
 
 def receive(client, window, nickname):
+    """
+    It receives messages from the server and prints them to the GUI
+
+    :param client: socket.socket
+    :param window: the GUI window
+    :param nickname: the nickname of the client
+    """
     while True:
         time_stamp = str(datetime.datetime.now())[:19]
         try:
@@ -69,6 +77,11 @@ def receive(client, window, nickname):
 
 
 def main():
+    """
+    It's a chat client that uses a socket to communicate with a server.
+    The server is not included in this code. The chat server is a separate program: 'chat_server_ui.py'.
+    The chat server allows multiple clients to connect to it and chat with each other in different rooms.
+    """
     ############################################################
     # Client Socket  init
     ############################################################

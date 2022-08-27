@@ -1,6 +1,6 @@
 # Chat Rooms Project
 
-> Chat Rooms is an exercise for a Python Software Development workshop. (Based on [PySimpleGUI](https://github.com/PySimpleGUI) framework)
+> Chats is an exercise in the Python Software Development Workshop. (Based on [PySimpleGUI](https://github.com/PySimpleGUI) framework)
 
 ## Description
 
